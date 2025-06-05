@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/restaurant2.jpg');
+    background-size: cover;
+    background-position: center;        
+    background-repeat: no-repeat;
+}
+
+.content, .container {
+    display: flex;
+    justify-content: center;
+}
+
+.content { 
+    width: 600px;
+    height: 600px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-image: url('images/food.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(80%);
+    transition: filter 0.5s;
+}
+
+.link {
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    font-size: 25px;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: rgba(17, 16, 16, 0.3); 
+    border-radius: 30px;
+    margin: 30px 0 0 30px;
+    transition: transform 0.5s;
+}
+
+.content:hover {
+    filter: none;
+}
+
+.link:hover {
+    transform: scale(1.3, 1.3);
+}
+
+/* Back button styling */
+.back-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: rgba(17, 16, 16, 0.5);
+    border-radius: 30px;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+    
+    .container {
+        position: absolute;
+        overflow-y: auto;
+    }
+    
+    .content {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0;
+    }
+    
+    .link {
+        margin: 15px;
+        font-size: 20px;
+    }
+    
+    .form-container {
+        margin: 20px;
+        padding: 15px;
+        width: 85%;
+    }
+    
+    .menu {
+        padding: 5px;
+    }
+    
+    .items {
+        justify-content: center;
+        padding-left: 0;
+    }
+    
+    .item {
+        margin: 10px;
+    }
+    
+    .item:hover {
+        transform: scale(1.1);
+    }
+}

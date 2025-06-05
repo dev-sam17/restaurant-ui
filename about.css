@@ -1,0 +1,36 @@
+p {
+    font-family: Verdana, sans-serif;
+    text-align: justify;
+    padding: 0 15px 0;
+}
+
+.form-container {
+    color: white;
+    background-image: linear-gradient(rgba(55, 53, 53, 0.158),rgba(105, 100, 100, 0.242));
+    padding: 20px;
+    border-radius: 20px;
+    margin: 50px auto;
+    max-width: 600px;
+    width: 90%;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+    .form-container {
+        margin: 20px auto;
+        padding: 15px;
+        width: 85%;
+        max-height: 75vh;
+    }
+    
+    p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+}
